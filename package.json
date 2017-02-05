@@ -1,0 +1,17 @@
+{
+  "name": "node-regexcrawler",
+  "version": "0.0.0",
+  "description": "Crawl website dom and match content using regex",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "~0.22.0"
+  },
+  "devDependencies": {
+    "mocha": "^3.2.0"
+  }
+}
