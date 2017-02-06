@@ -29,9 +29,9 @@ describe('RegexCrawler', function() {
         it('should fetch html', function() {
             let crawler = new RegexCrawler();
             let url = 'https://gist.githubusercontent.com/djaney/632f230a77f7ea8eff635d1bc93671f2/raw/01043d84c25ff122f8450195ee1364c73be1ce00/dummpy_for_unit_test.txt'
-            crawler.fetchHtml(url, ((err, text) => {
+            crawler.fetchHtml(url, (err, text) => {
                 assert.equal('Used for unit test', text);
-            }));
+            });
 
         });
     });
@@ -41,9 +41,9 @@ describe('RegexCrawler', function() {
         it('should fetch html, search dom and matchs string', function() {
             let crawler = new RegexCrawler();
             let url = 'https://gist.githubusercontent.com/djaney/bb4103ac4a1f287b4dda75684c4eb044/raw/c2f2112f95da1f16873f09298e86160cd609c304/dummy_html.html'
-            let text = crawler.testInnerHtml(url, 'html > body > h1', /^used for/i, ((err, success) => {
+            let text = crawler.testInnerHtml(url, 'html > body > h1', /^used for/i, (err, success) => {
                 assert.equal(true, success);
-            }));
+            });
 
         });
     });
